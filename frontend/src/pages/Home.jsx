@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import api from "../services/api";
 import { Link } from "react-router-dom";
 import CourseCard from "../components/CourseCard";
 import Footer from "../components/Footer";
@@ -34,9 +35,9 @@ export default function Home() {
   // Fetch courses directly from backend
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/api/courses")
-      .then(r => r.json())
-      .then(d => {
+    api.get("/courses")
+      
+      .then(r => { const d = r.data;
         const list = d?.data || d?.courses || [];
         setCourses(Array.isArray(list) ? list.slice(0, 8) : []);
       })
