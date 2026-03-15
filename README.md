@@ -269,7 +269,7 @@ http://localhost:3000
 
 ## 👨‍💻 Developer
 
-**Student Name:** ____________________
+**Student Name:** _________Muhammad Ali Baig___________
 
 **Course:** MERN Stack Web Development
 
